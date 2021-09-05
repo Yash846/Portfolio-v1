@@ -58,6 +58,7 @@ const typed = new Typed("#typed", {
 /*
     Nav Menu Toggle
 */
+const navLinks = document.querySelectorAll(".nav-item");
 const menuBtn = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector("#header");
 let menuOpen = false;
@@ -72,7 +73,13 @@ menuBtn.addEventListener("click", () => {
     menuOpen = false;
   }
 });
-
+navLinks.forEach((l) => {
+  l.addEventListener("click", () => {
+    navMenu.classList.remove("nav-active");
+    menuBtn.classList.remove("burger-transform");
+    menuOpen = false;
+  });
+});
 /*
     NAV links active on scroll
 */
