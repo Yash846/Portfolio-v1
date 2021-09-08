@@ -16,9 +16,9 @@ function animateLogo(scrollPos = 0) {
       loader.style.display = "none";
       document.body.style.overflowY = "initial";
       main.style.display = "block";
+      window.scrollTo(0, scrollPos);
       setTimeout(() => {
         main.style.opacity = 1;
-        window.scrollTo(0, scrollPos);
         AOS.init({ easing: "ease-in-out" }); //  AOS On Load Animation Library
       }, 50);
     }, 500);
