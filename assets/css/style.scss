@@ -11,11 +11,7 @@
 }
 html {
   scroll-behavior: smooth;
-}
-
-@font-face {
-  font-family: AnthoniSignature;
-  src: url("./AnthoniSignature.ttf");
+  scrollbar-width: thin;
 }
 
 body {
@@ -156,7 +152,7 @@ h6 {
     justify-content: center;
     align-items: center;
     img {
-      width: 270px;
+      width: 260px;
       cursor: pointer;
     }
   }
