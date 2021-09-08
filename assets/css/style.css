@@ -25,6 +25,7 @@ body {
   height: 100vh;
   background-color: #040b14;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 h1,

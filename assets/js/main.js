@@ -13,6 +13,7 @@ function animateLogo(scrollPos = 0) {
     loader.classList.add("exit");
     setTimeout(() => {
       loader.style.display = "none";
+      document.body.style.overflowY = "initial";
       main.style.display = "block";
       setTimeout(() => {
         main.style.opacity = 1;
