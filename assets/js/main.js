@@ -9,6 +9,7 @@ const loader = document.querySelector(".loader");
 const main = document.querySelector(".main");
 
 function animateLogo(scrollPos = 0) {
+  window.scrollTo(0, scrollPos);
   setTimeout(() => {
     loader.classList.add("exit");
     setTimeout(() => {
@@ -30,7 +31,7 @@ animateLogo();
     Header OnClick Loader Animation
 */
 
-const name = document.getElementById("header-name");
+const name = document.getElementById("name-img");
 name.addEventListener("click", () => {
   const scrollPos = window.scrollY;
   main.style.opacity = 0;

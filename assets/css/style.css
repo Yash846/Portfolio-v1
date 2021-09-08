@@ -191,25 +191,29 @@ h6 {
   transition: all 0.4s cubic-bezier(0.67, 0.06, 0.35, 0.98);
 }
 
-#header img {
+#header #profile-img {
   width: 120px;
   margin: 15px auto;
+  margin-bottom: 5px;
   border: 8px solid #2c2f3f;
   display: block;
 }
 
-#header #header-name {
-  text-align: center;
-  font-size: 2rem;
-  cursor: pointer;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+#header #name-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#header #header-name span {
-  font-size: 1.5rem;
-  font-family: AnthoniSignature, sans-serif;
-  font-weight: 600;
+#header #name-img img {
+  width: 270px;
+  cursor: pointer;
 }
 
 #header .social-links {
