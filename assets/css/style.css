@@ -21,7 +21,15 @@ body {
   height: 100vh;
   background-color: #040b14;
   overflow-x: hidden;
-  overflow-y: hidden;
+}
+
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url("/assets/images/hero-bg.jpg");
 }
 
 h1,

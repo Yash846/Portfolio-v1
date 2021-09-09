@@ -8,18 +8,13 @@ import Typed from "typed.js";
 const loader = document.querySelector(".loader");
 const main = document.querySelector(".main");
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
-
 function animateLogo(scrollPos = 0) {
-  window.scrollTo(0, 0);
-  main.style.display = "block";
   setTimeout(() => {
     loader.classList.add("exit");
     setTimeout(() => {
       loader.style.display = "none";
       document.body.style.overflowY = "initial";
+      main.style.display = "block";
       window.scrollTo(0, scrollPos);
       setTimeout(() => {
         main.style.opacity = 1;
@@ -37,13 +32,13 @@ animateLogo();
 
 const name = document.getElementById("name-img");
 name.addEventListener("click", () => {
-  const scrollPos = window.scrollY;
-  document.body.style.overflowY = "hidden";
+  let scrollPos = window.scrollY;
   main.style.opacity = 0;
   main.style.display = "none";
   loader.classList.remove("exit");
   loader.style.display = "block";
   animateLogo(scrollPos);
+  scrollPos = 0;
 });
 
 /* 
