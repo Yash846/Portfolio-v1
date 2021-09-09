@@ -10,12 +10,13 @@ const main = document.querySelector(".main");
 
 function animateLogo(scrollPos = 0) {
   window.scrollTo(0, scrollPos);
+  main.style.display = "block";
   setTimeout(() => {
     loader.classList.add("exit");
     setTimeout(() => {
       loader.style.display = "none";
       document.body.style.overflowY = "initial";
-      main.style.display = "block";
+      // main.style.display = "block";
       window.scrollTo(0, scrollPos);
       setTimeout(() => {
         main.style.opacity = 1;
@@ -34,6 +35,8 @@ animateLogo();
 const name = document.getElementById("name-img");
 name.addEventListener("click", () => {
   const scrollPos = window.scrollY;
+  window.scrollTo(0, 0);
+  document.body.style.overflowY = "hidden";
   main.style.opacity = 0;
   main.style.display = "none";
   loader.classList.remove("exit");
@@ -76,9 +79,11 @@ const navToggle = () => {
       menuBtn.classList.remove("burger-transform");
       menuOpen = false;
     }
+
     /* link fade in animation */
+
     navLinks.forEach((link, index) => {
-      if (menuOpen === false) {
+      if (link.style.animation) {
         link.style.animation = "";
       } else {
         link.style.animation = `navLinksFade 0.4s ease ${
