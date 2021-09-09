@@ -351,7 +351,7 @@ h6 {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
-  .nav-active .nav-item {
+  .nav-item {
     opacity: 0;
   }
   .nav-toggle.burger-transform .nav-toggle-burger {

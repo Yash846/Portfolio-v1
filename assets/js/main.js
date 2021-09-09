@@ -78,7 +78,7 @@ const navToggle = () => {
     }
     /* link fade in animation */
     navLinks.forEach((link, index) => {
-      if (link.style.animation) {
+      if (menuOpen === false) {
         link.style.animation = "";
       } else {
         link.style.animation = `navLinksFade 0.4s ease ${
@@ -95,6 +95,9 @@ const navToggle = () => {
       navMenu.classList.remove("nav-active");
       menuBtn.classList.remove("burger-transform");
       menuOpen = false;
+      navLinks.forEach((link) => {
+        link.style.animation = "";
+      });
     });
   });
 };

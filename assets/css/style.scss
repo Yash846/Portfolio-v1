@@ -272,9 +272,10 @@ h6 {
   }
   .nav-active {
     transform: translateX(0%);
-    .nav-item {
-      opacity: 0;
-    }
+  }
+
+  .nav-item {
+    opacity: 0;
   }
 
   .nav-toggle.burger-transform .nav-toggle-burger {
