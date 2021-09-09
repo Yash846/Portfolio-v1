@@ -63,43 +63,61 @@ const typed = new Typed("#typed", {
 const navLinks = document.querySelectorAll(".nav-item");
 const menuBtn = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector("#header");
-let menuOpen = false;
-menuBtn.addEventListener("click", () => {
-  if (!menuOpen) {
-    navMenu.classList.add("nav-active");
-    menuBtn.classList.add("burger-transform");
-    menuOpen = true;
-  } else {
-    navMenu.classList.remove("nav-active");
-    menuBtn.classList.remove("burger-transform");
-    menuOpen = false;
-  }
-});
-navLinks.forEach((l) => {
-  l.addEventListener("click", () => {
-    navMenu.classList.remove("nav-active");
-    menuBtn.classList.remove("burger-transform");
-    menuOpen = false;
+
+const navToggle = () => {
+  let menuOpen = false;
+  menuBtn.addEventListener("click", () => {
+    if (!menuOpen) {
+      navMenu.classList.add("nav-active");
+      menuBtn.classList.add("burger-transform");
+      menuOpen = true;
+    } else {
+      navMenu.classList.remove("nav-active");
+      menuBtn.classList.remove("burger-transform");
+      menuOpen = false;
+    }
+    /* link fade in animation */
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinksFade 0.4s ease ${
+          index / 7 + 0.3
+        }s forwards`;
+      }
+    });
   });
-});
+
+  /* Link on click nav close */
+
+  navLinks.forEach((l) => {
+    l.addEventListener("click", () => {
+      navMenu.classList.remove("nav-active");
+      menuBtn.classList.remove("burger-transform");
+      menuOpen = false;
+    });
+  });
+};
+
+navToggle();
+
 /*
     NAV links active on scroll
 */
 
 const sections = document.querySelectorAll("section");
-const navLink = document.querySelectorAll("nav li");
 
 window.addEventListener("scroll", () => {
   let current = "";
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+    if (scrollY >= sectionTop - sectionHeight / 3) {
       current = section.getAttribute("id");
     }
   });
 
-  navLink.forEach((li) => {
+  navLinks.forEach((li) => {
     li.classList.remove("active");
     if (li.dataset.name.includes(current)) {
       li.classList.add("active");

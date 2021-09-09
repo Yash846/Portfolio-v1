@@ -263,7 +263,7 @@ h6 {
 }
 
 @media screen and (max-width: 1200px) {
-  #header {
+  .header-nav {
     transform: translateX(-100%);
   }
   .nav-toggle {
@@ -271,8 +271,12 @@ h6 {
     z-index: 1;
   }
   .nav-active {
-    transform: translateX(0%) !important;
+    transform: translateX(0%);
+    .nav-item {
+      opacity: 0;
+    }
   }
+
   .nav-toggle.burger-transform .nav-toggle-burger {
     background: transparent;
   }
@@ -281,6 +285,17 @@ h6 {
   }
   .nav-toggle.burger-transform .nav-toggle-burger::after {
     transform: rotate(-45deg);
+  }
+}
+
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
 
@@ -678,5 +693,18 @@ section {
         }
       }
     }
+  }
+}
+
+#contact {
+  .opening-text {
+    color: hsla(216, 6%, 15%, 0.69);
+  }
+  #call {
+    display: inline-block;
+    font-size: 1.1rem;
+  }
+  h4 {
+    display: inline-block;
   }
 }
