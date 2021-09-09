@@ -8,6 +8,10 @@ import Typed from "typed.js";
 const loader = document.querySelector(".loader");
 const main = document.querySelector(".main");
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
 function animateLogo(scrollPos = 0) {
   window.scrollTo(0, 0);
   main.style.display = "block";
