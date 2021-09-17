@@ -624,6 +624,50 @@
         <section id="projects">
           <div class="container">
             <h2 class="section-title">Projects</h2>
+            <div class="projects-content row">
+              <div class="col-lg-6">
+                <h4 class="text-center">Project Title</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Excepturi veritatis magni a, obcaecati repellat id autem. Eum
+                  molestias illum, sed vel a temporibus nam, impedit tenetur,
+                  ipsam omnis quaerat explicabo? Harum, excepturi voluptatibus?
+                  Culpa eligendi eveniet numquam iste nisi facilis nam eum
+                  cupiditate distinctio molestias repellendus magni maiores,
+                  quidem veniam aliquam neque tenetur est doloribus nesciunt
+                  fugiat soluta? Sint, neque.
+                </p>
+              </div>
+              <div class="portfolio-img col-lg-6">
+                <img
+                  class="rounded float-start img-fluid"
+                  src="/assets/images/Portfolio.PNG"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="projects-content row">
+              <div class="portfolio-img col-lg-6">
+                <img
+                  class="rounded float-start img-fluid"
+                  src="/assets/images/Portfolio.PNG"
+                  alt=""
+                />
+              </div>
+              <div class="col-lg-6">
+                <h4 class="text-center">Project Title</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Excepturi veritatis magni a, obcaecati repellat id autem. Eum
+                  molestias illum, sed vel a temporibus nam, impedit tenetur,
+                  ipsam omnis quaerat explicabo? Harum, excepturi voluptatibus?
+                  Culpa eligendi eveniet numquam iste nisi facilis nam eum
+                  cupiditate distinctio molestias repellendus magni maiores,
+                  quidem veniam aliquam neque tenetur est doloribus nesciunt
+                  fugiat soluta? Sint, neque.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -779,16 +823,71 @@
 
         <section id="contact">
           <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <p class="text-center opening-text">
-              Wanna discuss an Oppourtunity/Project, Or just want to say Hi?
-              Reach out to me via any of the given ways and I'll get back to you
-              ASAP.
-            </p>
-            <div id="contacts-wrapper">
-              <i id="call" class="bi bi-telephone-fill"></i>
-              <h4>Phone Number</h4>
-              <p>+91 8758334930</p>
+            <div class="section-title">
+              <h2>Contact Me</h2>
+              <p class="text-center opening-text">
+                Wanna discuss an Oppourtunity/Project, Or just want to say Hi?
+                Reach out to me via any of the given ways and I'll get back to
+                you ASAP.
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-lg-5 d-flex align-items-stretch"></div>
+              <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                <form
+                  id="contact-form"
+                  action="POST"
+                  data-netlify="true"
+                  novalidate
+                >
+                  <span class="form-title">Drop a message</span>
+                  <div id="name" class="form-floating mb-3">
+                    <input
+                      id="nameInput"
+                      type="name"
+                      placeholder="Enter Your Name"
+                      class="form-control"
+                      name="name"
+                      required
+                    />
+                    <label for="nameInput" class="form-label">Name</label>
+                  </div>
+                  <div id="email" class="form-floating mb-3">
+                    <input
+                      id="emailInput"
+                      type="email"
+                      class="form-control"
+                      placeholder="name@example.com"
+                      name="email"
+                      required
+                    />
+                    <label for="emailInput" class="form-label">Email</label>
+                    <div class="invalid-feedback">
+                      Please enter a valid email.
+                    </div>
+                  </div>
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control"
+                      placeholder="Leave a comment here"
+                      id="floatingTextarea"
+                      name="message"
+                      required
+                    ></textarea>
+                    <label for="floatingTextarea">Message</label>
+                  </div>
+                  <div>
+                    <div data-netlify-recaptcha="true"></div>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit">
+                      <span
+                        >Send Message <i class="bi bi-arrow-right"></i
+                      ></span>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </section>
