@@ -574,11 +574,34 @@ section h3::after {
           align-items: center;
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
-  margin-bottom: 20px;
+  position: relative;
+  margin-top: 2rem;
 }
 
 #projects .portfolio-img {
   max-width: 500px;
+}
+
+#projects .projects-text {
+  margin-top: 1.5rem;
+}
+
+#projects #project2 {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 992px) {
+  #projects .projects-content {
+    padding-top: 4rem;
+  }
+  #projects .project-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 #experience {
@@ -594,6 +617,8 @@ section h3::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 55ch;
+  margin: auto;
 }
 
 #experience .exp-content::after {
@@ -601,14 +626,11 @@ section h3::after {
   position: absolute;
   top: 5px;
   bottom: 0;
-  left: 50%;
+  left: 0;
   border-left: 2px solid #1f5297;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
 }
 
 #experience .exp-content .se {
-  margin-left: 50%;
   padding-left: 20px;
   position: relative;
 }
@@ -627,9 +649,7 @@ section h3::after {
 }
 
 #experience .exp-content .se-trainee {
-  margin-right: 50%;
-  padding-right: 20px;
-  text-align: right;
+  padding-left: 20px;
   position: relative;
 }
 
@@ -640,7 +660,7 @@ section h3::after {
   width: 16px;
   height: 16px;
   border-radius: 50px;
-  right: -8px;
+  left: -8px;
   top: 5px;
   background: #fff;
   border: 2px solid #1f5297;
@@ -848,11 +868,192 @@ section h3::after {
   }
 }
 
+#education #graduation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  max-width: 800px;
+  margin-top: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+}
+
+#education #graduation .gtu-img {
+  max-width: 200px;
+  margin-right: 30px;
+}
+
+#education #graduation .gtu-img img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+#education #graduation .gtu-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#education #graduation .gtu-text .gtu-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#education #graduation .gtu-text h4,
+#education #graduation .gtu-text p {
+  font-family: "Poppins", sans-serif;
+}
+
+#education #graduation .gtu-text p {
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 560px) {
+  #education #graduation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #education #graduation .gtu-img {
+    margin-right: 0;
+  }
+  #education #graduation .gtu-text {
+    margin-top: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#graduation-title {
+  padding-top: 40px;
+}
+
 #contact .opening-text {
   color: rgba(36, 38, 41, 0.69);
   padding-bottom: 30px;
   max-width: 65ch;
   margin: auto;
+  margin-top: 2.5rem;
+}
+
+#contact .info {
+  width: 100%;
+  padding: 30px;
+  -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#contact .info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+#contact .info-block:hover i {
+  background-color: #149ddd;
+  color: #fff;
+}
+
+#contact .info-text {
+  margin-left: 1rem;
+}
+
+#contact .contact-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+#contact .contact-icons i {
+  width: 45px;
+  height: 45px;
+  background-color: #149ddd2e;
+  border-radius: 50%;
+  color: #000101cc;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+#contact .linkedin-contact h4 {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+#contact .linkedin-contact a {
+  text-decoration: none;
+  color: var(--bs-body-color);
+}
+
+#contact .linkedin-contact a:active i {
+  background-color: #149ddd;
+  color: #fff;
 }
 
 #contact #contact-form {
@@ -860,6 +1061,7 @@ section h3::after {
   padding: 30px;
   -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
 }
 
 #contact #contact-form .form-title {

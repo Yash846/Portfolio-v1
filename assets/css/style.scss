@@ -455,10 +455,31 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap-reverse;
-    margin-bottom: 20px;
+    position: relative;
+    margin-top: 2rem;
   }
   .portfolio-img {
     max-width: 500px;
+  }
+
+  .projects-text {
+    margin-top: 1.5rem;
+  }
+
+  #project2 {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 992px) {
+    .projects-content {
+      padding-top: 4rem;
+    }
+    .project-title {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -469,18 +490,20 @@ section {
     position: relative;
     display: flex;
     flex-direction: column;
+    max-width: 55ch;
+    margin: auto;
 
     &::after {
       content: "";
       position: absolute;
       top: 5px;
       bottom: 0;
-      left: 50%;
+      left: 0;
       border-left: 2px solid #1f5297;
-      transform: translate(-50%);
+      // transform: translate(-100%);
     }
     .se {
-      margin-left: 50%;
+      // margin-left: 50%;
       padding-left: 20px;
       position: relative;
 
@@ -498,9 +521,9 @@ section {
       }
     }
     .se-trainee {
-      margin-right: 50%;
-      padding-right: 20px;
-      text-align: right;
+      // margin-right: 50%;
+      padding-left: 20px;
+      // text-align: right;
       position: relative;
 
       &::before {
@@ -510,7 +533,7 @@ section {
         width: 16px;
         height: 16px;
         border-radius: 50px;
-        right: -8px;
+        left: -8px;
         top: 5px;
         background: #fff;
         border: 2px solid #1f5297;
@@ -714,6 +737,65 @@ section {
       }
     }
   }
+  #graduation {
+    display: flex;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    max-width: 800px;
+    margin-top: 30px;
+    align-items: center;
+    margin-top: 3rem;
+
+    .gtu-img {
+      max-width: 200px;
+      margin-right: 30px;
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+    .gtu-text {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      flex-wrap: wrap;
+
+      .gtu-desc {
+        display: flex;
+        flex-direction: column;
+      }
+
+      h4,
+      p {
+        font-family: "Poppins", sans-serif;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+    @media screen and (max-width: 560px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .gtu-img {
+        margin-right: 0;
+      }
+      .gtu-text {
+        margin-top: 30px;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+#graduation-title {
+  padding-top: 40px;
 }
 
 #contact {
@@ -722,12 +804,79 @@ section {
     padding-bottom: 30px;
     max-width: 65ch;
     margin: auto;
+    margin-top: 2.5rem;
+  }
+
+  .info {
+    width: 100%;
+    padding: 30px;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .info-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px;
+
+    &:hover {
+      i {
+        background-color: #149ddd;
+        color: #fff;
+      }
+    }
+  }
+
+  .info-text {
+    margin-left: 1rem;
+  }
+
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-15px);
+
+    i {
+      width: 45px;
+      height: 45px;
+      background-color: #149ddd2e;
+      border-radius: 50%;
+      color: #000101cc;
+      font-size: 1.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 500ms ease;
+    }
+  }
+
+  .linkedin-contact {
+    h4 {
+      transform: translateY(-10px);
+    }
+    a {
+      text-decoration: none;
+      color: var(--bs-body-color);
+
+      &:active {
+        i {
+          background-color: #149ddd;
+          color: #fff;
+        }
+      }
+    }
   }
 
   #contact-form {
     width: 100%;
     padding: 30px;
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
 
     .form-title {
       display: block;
