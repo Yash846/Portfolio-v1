@@ -320,13 +320,14 @@ h6 {
   align-items: center;
 
   h1 {
-    font-size: 40px;
-    color: antiquewhite;
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(28px, 2.6vw, 40px);
+    color: #fff;
   }
 
   p {
     font-size: 20px;
-    color: antiquewhite;
+    color: #fff;
     margin-top: 20px;
 
     span {
@@ -339,6 +340,65 @@ h6 {
     margin-left: 300px;
     padding-right: 20px;
     padding-left: clamp(50px, 5vw, 100px);
+  }
+
+  .hero-btn {
+    $thick: 1.5px;
+    $pad: 0.3em;
+    $extra: calc(#{$pad} * 1.2);
+    $color: #fff;
+
+    margin-top: 30px;
+
+    button {
+      position: relative;
+      height: 45px;
+      padding: 5px 10px;
+      font-weight: 500;
+      font-size: 1rem;
+      font-family: "Poppins", sans-serif;
+      letter-spacing: 1.5px;
+      color: hsla(0, 0%, 100%, 0.925);
+      border: 2px hsla(0, 0%, 100%, 0.659) solid;
+      border-radius: 4px;
+      outline: 0;
+      overflow: hidden;
+      background: none;
+      cursor: pointer;
+      transition: 0.08s ease-in;
+
+      i {
+        display: inline-block;
+        transition: all 0.4s;
+        transform: scale(1.4);
+        padding-left: 5px;
+      }
+
+      &:hover {
+        color: #fff;
+        border-color: hsla(0, 0%, 99.2%, 0.4);
+
+        i {
+          transform: scale(1.4) translateY(-2px) rotate(90deg);
+        }
+
+        &::before {
+          top: 0;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background: hsla(220, 4.5%, 26.3%, 0.47);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: -1;
+        transition: top 0.09s ease-in;
+      }
+    }
   }
 }
 
@@ -402,6 +462,59 @@ section {
     // margin-top: 20px;
     text-align: center;
   }
+
+  #about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .custom-btn {
+    margin: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: 0.25s ease;
+    color: #fff;
+    border-color: #149ddd;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      background: #149ddd;
+      width: 110%;
+      padding-top: 140%;
+      transition: 0.25s ease;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      border-radius: 999px;
+      top: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      color: #149ddd;
+
+      &::after {
+        top: 420%;
+      }
+    }
+  }
+
   .skills-main {
     padding-top: 30px;
     margin: auto;

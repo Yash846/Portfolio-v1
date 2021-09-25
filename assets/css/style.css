@@ -424,13 +424,14 @@ h6 {
 }
 
 #hero h1 {
-  font-size: 40px;
-  color: antiquewhite;
+  font-family: "Raleway", sans-serif;
+  font-size: clamp(28px, 2.6vw, 40px);
+  color: #fff;
 }
 
 #hero p {
   font-size: 20px;
-  color: antiquewhite;
+  color: #fff;
   margin-top: 20px;
 }
 
@@ -443,6 +444,65 @@ h6 {
   margin-left: 300px;
   padding-right: 20px;
   padding-left: clamp(50px, 5vw, 100px);
+}
+
+#hero .hero-btn {
+  margin-top: 30px;
+}
+
+#hero .hero-btn button {
+  position: relative;
+  height: 45px;
+  padding: 5px 10px;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.925);
+  border: 2px rgba(255, 255, 255, 0.659) solid;
+  border-radius: 4px;
+  outline: 0;
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+  -webkit-transition: 0.08s ease-in;
+  transition: 0.08s ease-in;
+}
+
+#hero .hero-btn button i {
+  display: inline-block;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  padding-left: 5px;
+}
+
+#hero .hero-btn button:hover {
+  color: #fff;
+  border-color: rgba(253, 253, 253, 0.4);
+}
+
+#hero .hero-btn button:hover i {
+  -webkit-transform: scale(1.4) translateY(-2px) rotate(90deg);
+          transform: scale(1.4) translateY(-2px) rotate(90deg);
+}
+
+#hero .hero-btn button:hover::before {
+  top: 0;
+}
+
+#hero .hero-btn button::before {
+  content: "";
+  position: absolute;
+  background: rgba(64, 66, 70, 0.47);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+  transition: top 0.09s ease-in;
 }
 
 @media screen and (max-width: 1200px) {
@@ -500,6 +560,69 @@ section h3::after {
   max-width: 70ch;
   margin: auto;
   text-align: center;
+}
+
+#about #about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about .custom-btn {
+  margin: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  color: #fff;
+  border-color: #149ddd;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+#about .custom-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+#about .custom-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #149ddd;
+  width: 110%;
+  padding-top: 140%;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  border-radius: 999px;
+  top: 100%;
+}
+
+#about .custom-btn:hover, #about .custom-btn:focus {
+  color: #149ddd;
+}
+
+#about .custom-btn:hover::after, #about .custom-btn:focus::after {
+  top: 420%;
 }
 
 #about .skills-main {
