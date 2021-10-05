@@ -326,6 +326,7 @@ h6 {
   }
 
   p {
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     color: #fff;
     margin-top: 20px;
@@ -419,7 +420,7 @@ h6 {
 }
 
 section {
-  min-height: 100vh;
+  // min-height: 100vh;
   padding: 40px 10px;
 
   h2,
@@ -468,6 +469,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Poppins", sans-serif;
   }
 
   .custom-btn {
@@ -531,38 +533,44 @@ section {
       left: 50%;
       transform: translate(-50%, 0);
     }
-    .dev-icons {
-      list-style: none;
-      text-align: center;
-      padding: 0;
-      .software-skill {
-        display: inline-block;
-        padding: 1rem;
-        width: 80px;
-        svg {
-          width: 48px;
-        }
-        p {
-          padding-top: 10px;
-          font-family: "Poppins", sans-serif;
-          font-size: 0.8rem;
-          color: #707086e8;
-        }
-      }
-      li:nth-child(4) p,
-      li:nth-child(10) p {
-        transform: translateX(-6px);
-      }
-      li:nth-child(5) p,
-      li:nth-child(11) p {
-        transform: translateX(-10px);
-      }
+  }
+}
+
+.dev-icons {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  .software-skill {
+    display: inline-block;
+    padding: 1rem;
+    width: 80px;
+    svg {
+      width: 48px;
     }
+    p {
+      padding-top: 10px;
+      font-family: "Poppins", sans-serif;
+      font-size: 0.8rem;
+      color: #707086e8;
+    }
+  }
+  li:nth-child(4) p,
+  li:nth-child(10) p {
+    transform: translateX(-6px);
+  }
+  li:nth-child(5) p,
+  li:nth-child(11) p {
+    transform: translateX(-10px);
   }
 }
 
 #projects {
   background-color: hsl(218, 67%, 98%);
+
+  p {
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+  }
   .projects-content {
     display: flex;
     justify-content: center;
@@ -575,8 +583,28 @@ section {
     max-width: 500px;
   }
 
-  .projects-text {
+  .project-desc {
     margin-top: 1.5rem;
+
+    .dev-icons {
+      .software-skill {
+        padding: 0.5rem;
+        width: 60px;
+        svg {
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  .project-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    border-bottom: 2.4px solid #b80000;
+    padding: 5px;
+    margin: auto;
+    width: 200px;
   }
 
   #project2 {
@@ -599,6 +627,14 @@ section {
 #experience {
   min-height: initial;
 
+  p {
+    font-family: "Poppins";
+  }
+
+  h4 {
+    font-weight: 600;
+  }
+
   .exp-content {
     position: relative;
     display: flex;
@@ -615,6 +651,17 @@ section {
       border-left: 2px solid #1f5297;
       // transform: translate(-100%);
     }
+    .corp {
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 600;
+    }
+    .year {
+      background-color: #e4edf9;
+      display: inline-block;
+      font-size: 12px;
+      padding: 5px 15px;
+    }
     .se {
       // margin-left: 50%;
       padding-left: 20px;
@@ -627,7 +674,7 @@ section {
         width: 16px;
         height: 16px;
         border-radius: 50px;
-        left: -8px;
+        left: -7px;
         top: 5px;
         background: #fff;
         border: 2px solid #1f5297;
@@ -646,7 +693,7 @@ section {
         width: 16px;
         height: 16px;
         border-radius: 50px;
-        left: -8px;
+        left: -7px;
         top: 5px;
         background: #fff;
         border: 2px solid #1f5297;

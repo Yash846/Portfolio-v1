@@ -430,6 +430,7 @@ h6 {
 }
 
 #hero p {
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   color: #fff;
   margin-top: 20px;
@@ -518,7 +519,6 @@ h6 {
 }
 
 section {
-  min-height: 100vh;
   padding: 40px 10px;
 }
 
@@ -576,6 +576,7 @@ section h3::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Poppins", sans-serif;
 }
 
 #about .custom-btn {
@@ -646,43 +647,48 @@ section h3::after {
           transform: translate(-50%, 0);
 }
 
-#about .skills-main .dev-icons {
+.dev-icons {
   list-style: none;
   text-align: center;
   padding: 0;
 }
 
-#about .skills-main .dev-icons .software-skill {
+.dev-icons .software-skill {
   display: inline-block;
   padding: 1rem;
   width: 80px;
 }
 
-#about .skills-main .dev-icons .software-skill svg {
+.dev-icons .software-skill svg {
   width: 48px;
 }
 
-#about .skills-main .dev-icons .software-skill p {
+.dev-icons .software-skill p {
   padding-top: 10px;
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   color: #707086e8;
 }
 
-#about .skills-main .dev-icons li:nth-child(4) p,
-#about .skills-main .dev-icons li:nth-child(10) p {
+.dev-icons li:nth-child(4) p,
+.dev-icons li:nth-child(10) p {
   -webkit-transform: translateX(-6px);
           transform: translateX(-6px);
 }
 
-#about .skills-main .dev-icons li:nth-child(5) p,
-#about .skills-main .dev-icons li:nth-child(11) p {
+.dev-icons li:nth-child(5) p,
+.dev-icons li:nth-child(11) p {
   -webkit-transform: translateX(-10px);
           transform: translateX(-10px);
 }
 
 #projects {
   background-color: #f6f9fd;
+}
+
+#projects p {
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
 }
 
 #projects .projects-content {
@@ -705,8 +711,27 @@ section h3::after {
   max-width: 500px;
 }
 
-#projects .projects-text {
+#projects .project-desc {
   margin-top: 1.5rem;
+}
+
+#projects .project-desc .dev-icons .software-skill {
+  padding: 0.5rem;
+  width: 60px;
+}
+
+#projects .project-desc .dev-icons .software-skill svg {
+  width: 40px;
+}
+
+#projects .project-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  border-bottom: 2.4px solid #b80000;
+  padding: 5px;
+  margin: auto;
+  width: 200px;
 }
 
 #projects #project2 {
@@ -731,6 +756,14 @@ section h3::after {
   min-height: initial;
 }
 
+#experience p {
+  font-family: "Poppins";
+}
+
+#experience h4 {
+  font-weight: 600;
+}
+
 #experience .exp-content {
   position: relative;
   display: -webkit-box;
@@ -753,6 +786,19 @@ section h3::after {
   border-left: 2px solid #1f5297;
 }
 
+#experience .exp-content .corp {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+#experience .exp-content .year {
+  background-color: #e4edf9;
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 15px;
+}
+
 #experience .exp-content .se {
   padding-left: 20px;
   position: relative;
@@ -765,7 +811,7 @@ section h3::after {
   width: 16px;
   height: 16px;
   border-radius: 50px;
-  left: -8px;
+  left: -7px;
   top: 5px;
   background: #fff;
   border: 2px solid #1f5297;
@@ -783,7 +829,7 @@ section h3::after {
   width: 16px;
   height: 16px;
   border-radius: 50px;
-  left: -8px;
+  left: -7px;
   top: 5px;
   background: #fff;
   border: 2px solid #1f5297;
