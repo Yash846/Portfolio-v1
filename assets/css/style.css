@@ -764,6 +764,10 @@ section h3::after {
   font-weight: 600;
 }
 
+#experience #exp-opening {
+  margin-bottom: 1.5rem;
+}
+
 #experience .exp-content {
   position: relative;
   display: -webkit-box;
@@ -773,7 +777,7 @@ section h3::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 55ch;
+  max-width: 75ch;
   margin: auto;
 }
 
@@ -797,6 +801,7 @@ section h3::after {
   display: inline-block;
   font-size: 12px;
   padding: 5px 15px;
+  margin-bottom: 0;
 }
 
 #experience .exp-content .se {
@@ -1136,6 +1141,16 @@ section h3::after {
   margin-top: 2.5rem;
 }
 
+#contact a {
+  text-decoration: none;
+  color: var(--bs-body-color);
+}
+
+#contact a:active i {
+  background-color: #149ddd;
+  color: #fff;
+}
+
 #contact .info {
   width: 100%;
   padding: 30px;
@@ -1210,19 +1225,22 @@ section h3::after {
   transition: all 500ms ease;
 }
 
+#contact .touch {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #contact .touch {
+    display: initial;
+  }
+  #contact .non-touch {
+    display: none;
+  }
+}
+
 #contact .linkedin-contact h4 {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
-}
-
-#contact .linkedin-contact a {
-  text-decoration: none;
-  color: var(--bs-body-color);
-}
-
-#contact .linkedin-contact a:active i {
-  background-color: #149ddd;
-  color: #fff;
 }
 
 #contact #contact-form {

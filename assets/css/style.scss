@@ -635,11 +635,15 @@ section {
     font-weight: 600;
   }
 
+  #exp-opening {
+    margin-bottom: 1.5rem;
+  }
+
   .exp-content {
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 55ch;
+    max-width: 75ch;
     margin: auto;
 
     &::after {
@@ -661,6 +665,7 @@ section {
       display: inline-block;
       font-size: 12px;
       padding: 5px 15px;
+      margin-bottom: 0;
     }
     .se {
       // margin-left: 50%;
@@ -967,6 +972,18 @@ section {
     margin-top: 2.5rem;
   }
 
+  a {
+    text-decoration: none;
+    color: var(--bs-body-color);
+
+    &:active {
+      i {
+        background-color: #149ddd;
+        color: #fff;
+      }
+    }
+  }
+
   .info {
     width: 100%;
     padding: 30px;
@@ -1015,20 +1032,22 @@ section {
     }
   }
 
+  .touch {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .touch {
+      display: initial;
+    }
+    .non-touch {
+      display: none;
+    }
+  }
+
   .linkedin-contact {
     h4 {
       transform: translateY(-10px);
-    }
-    a {
-      text-decoration: none;
-      color: var(--bs-body-color);
-
-      &:active {
-        i {
-          background-color: #149ddd;
-          color: #fff;
-        }
-      }
     }
   }
 
