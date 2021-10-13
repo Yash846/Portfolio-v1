@@ -740,7 +740,7 @@ section {
       background-image: url("/assets/images/web-dev-course.jpg");
       background-size: cover;
       line-height: 1.6;
-      padding: 3rem 0 0;
+      padding: 2rem 0 0;
       margin: 1rem;
       max-width: 40ch;
       height: 355px;
@@ -858,7 +858,6 @@ section {
 
     #react {
       background-image: url("/assets/images/react1.png");
-      padding-top: 2rem;
 
       a {
         cursor: default;
@@ -868,7 +867,6 @@ section {
 
     #sql {
       background-image: url("/assets/images/sql.png");
-      padding-top: 2rem;
     }
 
     #aws {
@@ -880,12 +878,12 @@ section {
     #algo {
       background-image: url("/assets/images/Algo.png");
       background-size: contain;
-      padding-top: 2rem;
     }
 
     @media screen and (max-width: 840px) {
       .card {
         max-width: 35ch;
+        padding-top: 0;
 
         .card-content {
           padding-left: 0.8rem;
@@ -901,6 +899,7 @@ section {
       .card {
         margin-left: 0;
         margin-right: 0;
+        padding-top: 2.7rem;
 
         .card-title {
           font-size: 1.1rem;
