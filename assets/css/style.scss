@@ -743,6 +743,7 @@ section {
       padding: 3rem 0 0;
       margin: 1rem;
       max-width: 40ch;
+      height: 355px;
       border-radius: 0.5rem;
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
@@ -750,7 +751,7 @@ section {
       transition: transform 500ms ease;
 
       .card-content {
-        --padding: 1.5rem;
+        --padding: 1.7rem;
         padding: var(--padding);
         background: linear-gradient(
           hsla(0, 0%, 0%, 0),
@@ -787,7 +788,7 @@ section {
         transform: translateY(5px);
         background-color: rgba(0, 0%, 0%, 0.45);
         border-radius: 0.3rem;
-        text-align: center;
+        text-align: initial;
       }
     }
 
@@ -857,10 +858,17 @@ section {
 
     #react {
       background-image: url("/assets/images/react1.png");
+      padding-top: 2rem;
+
+      a {
+        cursor: default;
+        pointer-events: none;
+      }
     }
 
     #sql {
       background-image: url("/assets/images/sql.png");
+      padding-top: 2rem;
     }
 
     #aws {
@@ -872,6 +880,7 @@ section {
     #algo {
       background-image: url("/assets/images/Algo.png");
       background-size: contain;
+      padding-top: 2rem;
     }
 
     @media screen and (max-width: 840px) {
