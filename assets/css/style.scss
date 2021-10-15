@@ -472,51 +472,6 @@ section {
     font-family: "Poppins", sans-serif;
   }
 
-  .custom-btn {
-    margin: 1.2rem;
-    padding: 10px 20px;
-    border-radius: 6px;
-    border-width: 2px;
-    border-style: solid;
-    font-size: 1rem;
-    font-family: "Poppins", sans-serif;
-    cursor: pointer;
-    transition: 0.25s ease;
-    color: #fff;
-    border-color: #149ddd;
-    background: transparent;
-    position: relative;
-    overflow: hidden;
-
-    span {
-      position: relative;
-      z-index: 1;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      background: #149ddd;
-      width: 110%;
-      padding-top: 140%;
-      transition: 0.25s ease;
-      transform: translate(-50%, -50%);
-      left: 50%;
-      border-radius: 999px;
-      top: 100%;
-    }
-
-    &:hover,
-    &:focus {
-      color: #149ddd;
-
-      &::after {
-        top: 420%;
-      }
-    }
-  }
-
   .skills-main {
     padding-top: 30px;
     margin: auto;
@@ -532,6 +487,53 @@ section {
       height: 2px;
       left: 50%;
       transform: translate(-50%, 0);
+    }
+  }
+}
+
+.custom-btn {
+  display: inline-block;
+  margin: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: 0.25s ease;
+  color: #fff;
+  border-color: #149ddd;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    background: #149ddd;
+    width: 110%;
+    padding-top: 140%;
+    transition: 0.25s ease;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    border-radius: 999px;
+    top: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    color: #149ddd;
+
+    &::after {
+      top: 420%;
     }
   }
 }
@@ -595,6 +597,11 @@ section {
         }
       }
     }
+  }
+
+  .project-links {
+    display: flex;
+    justify-content: center;
   }
 
   .project-title {

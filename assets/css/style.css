@@ -579,53 +579,6 @@ section h3::after {
   font-family: "Poppins", sans-serif;
 }
 
-#about .custom-btn {
-  margin: 1.2rem;
-  padding: 10px 20px;
-  border-radius: 6px;
-  border-width: 2px;
-  border-style: solid;
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
-  color: #fff;
-  border-color: #149ddd;
-  background: transparent;
-  position: relative;
-  overflow: hidden;
-}
-
-#about .custom-btn span {
-  position: relative;
-  z-index: 1;
-}
-
-#about .custom-btn::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  background: #149ddd;
-  width: 110%;
-  padding-top: 140%;
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  left: 50%;
-  border-radius: 999px;
-  top: 100%;
-}
-
-#about .custom-btn:hover, #about .custom-btn:focus {
-  color: #149ddd;
-}
-
-#about .custom-btn:hover::after, #about .custom-btn:focus::after {
-  top: 420%;
-}
-
 #about .skills-main {
   padding-top: 30px;
   margin: auto;
@@ -645,6 +598,55 @@ section h3::after {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+
+.custom-btn {
+  display: inline-block;
+  margin: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  color: #fff;
+  border-color: #149ddd;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.custom-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #149ddd;
+  width: 110%;
+  padding-top: 140%;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  border-radius: 999px;
+  top: 100%;
+}
+
+.custom-btn:hover, .custom-btn:focus {
+  color: #149ddd;
+}
+
+.custom-btn:hover::after, .custom-btn:focus::after {
+  top: 420%;
 }
 
 .dev-icons {
@@ -722,6 +724,15 @@ section h3::after {
 
 #projects .project-desc .dev-icons .software-skill svg {
   width: 40px;
+}
+
+#projects .project-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #projects .project-title {
