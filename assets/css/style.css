@@ -1306,4 +1306,13 @@ section h3::after {
 #contact h4 {
   display: inline-block;
 }
+
+#contact .attribution {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  margin: 1rem;
+  margin-top: 2rem;
+  color: #201d1dba;
+}
 /*# sourceMappingURL=style.css.map */
