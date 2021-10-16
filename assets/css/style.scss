@@ -609,6 +609,7 @@ section {
   @media screen and (max-width: 440px) {
     .project-links {
       flex-direction: column;
+      align-items: center;
     }
   }
 
