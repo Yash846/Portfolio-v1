@@ -508,6 +508,8 @@ section {
   background: transparent;
   position: relative;
   overflow: hidden;
+  width: 200px;
+  text-align: center;
 
   span {
     position: relative;
@@ -604,6 +606,12 @@ section {
     justify-content: center;
   }
 
+  @media screen and (max-width: 440px) {
+    .project-links {
+      flex-direction: column;
+    }
+  }
+
   .project-title {
     font-family: "Raleway", sans-serif;
     font-weight: 600;
@@ -627,6 +635,20 @@ section {
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+
+  .project-footer {
+    margin: auto;
+    margin-top: 1rem;
+    max-width: 75ch;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+
+    a {
+      font-style: italic;
+      color: #0058ffe8;
+      text-decoration: none;
     }
   }
 }

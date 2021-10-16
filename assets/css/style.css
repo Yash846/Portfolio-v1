@@ -618,6 +618,8 @@ section h3::after {
   background: transparent;
   position: relative;
   overflow: hidden;
+  width: 200px;
+  text-align: center;
 }
 
 .custom-btn span {
@@ -735,6 +737,15 @@ section h3::after {
           justify-content: center;
 }
 
+@media screen and (max-width: 440px) {
+  #projects .project-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #projects .project-title {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
@@ -761,6 +772,20 @@ section h3::after {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
+}
+
+#projects .project-footer {
+  margin: auto;
+  margin-top: 1rem;
+  max-width: 75ch;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+#projects .project-footer a {
+  font-style: italic;
+  color: #0058ffe8;
+  text-decoration: none;
 }
 
 #experience {
