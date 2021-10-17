@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yash Sawlani - Portfolio</title>
 
-    <!-- -------------------- Fav-icon ------------------- -->
+    <!-- ////////////////////////// Fav-icon  ///////////////////////// -->
     <link
       rel="shortcut icon"
       href="/assets/images/favicon.png"
       type="image/x-icon"
     />
 
-    <!-- ------------------------ bootstrap-icons ----------------------- -->
+    <!-- ////////////////////////// bootstrap-icons ////////////////////////// -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
 
-    <!-- ------------------------ bootstrap ----------------------- -->
+    <!-- ////////////////////////// bootstrap ////////////////////////// -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,7 +27,7 @@
       crossorigin="anonymous"
     />
 
-    <!-- ----------------------- Fonts ------------------------ -->
+    <!-- ////////////////////////// Fonts ////////////////////////// -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,7 +35,7 @@
       rel="stylesheet"
     />
 
-    <!-- ------------------------ AOS ---------------------- -->
+    <!-- ////////////////////////// AOS ////////////////////////// -->
     <link rel="stylesheet" href="/assets/vendor/aos.css" />
 
     <link rel="stylesheet" href="/assets/css/style.css" />
@@ -124,7 +124,7 @@
         <div class="d-flex flex-column">
           <div class="profile">
             <img
-              id="profile-img"
+              id="header-img"
               class="img-fluid rounded-circle"
               src="/assets/images/profile-img.jpg"
               alt=""
@@ -152,7 +152,7 @@
           </div>
           <!-- ///////////////////////// Navbar ////////////////////// -->
 
-          <nav id="navbar" class="nav-menu navbar" role="navigation">
+          <nav id="navbar" class="nav-menu navbar">
             <ul class="nav flex-column">
               <li class="nav-item active" data-name="hero">
                 <a href="#hero" class="nav-link" aria-current="page"
@@ -210,10 +210,9 @@
             ></span>
           </p>
           <div class="hero-btn">
-            <a href="#about"
-              ><button>
-                Let's get started
-                <i class="bi bi-arrow-right-short"></i></button
+            <a href="#about">
+              Let's get started
+              <i class="bi bi-arrow-right-short"></i
             ></a>
           </div>
         </div>
@@ -235,7 +234,7 @@
 
             <div class="row">
               <div
-                id="profile-img"
+                id="about-img"
                 class="col-lg-6"
                 data-aos="fade-right"
                 data-aod-duration="2000"
@@ -1122,9 +1121,7 @@
                     <li>Used Redux for state management and scaling</li>
                     <li>Learned to handle payments with Stripe API</li>
                   </ul>
-                  <a class="card-button" disabled="disabled"
-                    >Currently Pursuing</a
-                  >
+                  <a class="card-button">Currently Pursuing</a>
                 </div>
               </div>
               <div id="web-dev" class="card">
@@ -1329,7 +1326,7 @@
                   <div id="name" class="form-floating mb-3">
                     <input
                       id="nameInput"
-                      type="name"
+                      type="text"
                       placeholder="Enter Your Name"
                       class="form-control"
                       name="name"

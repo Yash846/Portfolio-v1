@@ -148,7 +148,7 @@ h6 {
   z-index: 2;
   transition: all 0.4s cubic-bezier(0.67, 0.06, 0.35, 0.98);
 
-  #profile-img {
+  #header-img {
     width: 120px;
     margin: 15px auto;
     margin-bottom: 5px;
@@ -349,12 +349,13 @@ h6 {
     $extra: calc(#{$pad} * 1.2);
     $color: #fff;
 
-    margin-top: 30px;
+    margin-top: 2.5rem;
 
-    button {
+    a {
       position: relative;
       height: 45px;
-      padding: 5px 10px;
+      text-decoration: none;
+      padding: 10px 10px;
       font-weight: 500;
       font-size: 1rem;
       font-family: "Poppins", sans-serif;
@@ -453,7 +454,7 @@ section {
 }
 
 #about {
-  #profile-img {
+  #about-img {
     max-width: 450px;
     margin: auto;
   }
